@@ -1,0 +1,83 @@
+.header {
+  background-image: url(../images/ovo.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__container {
+    background-color: rgba($color: #c95100, $alpha: 0.4);
+    height: 40vh;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .logo {
+    width: 70%;
+  }
+  &__hamburger {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 44px;
+    height: 44px;
+    background-color: #c95100;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+  }
+
+  &__subtittle {
+    width: 90%;
+    height: 21px;
+    color: $color-white;
+    font-family: $font-main;
+    font-size: 2rem;
+  }
+  &__arrow {
+    width: 45px;
+    height: 45px;
+    background-color: $color-white;
+    text-align: center;
+    margin: 45px 0 53px 0;
+    padding-top: 14px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: intro;
+    animation-timing-function: ease-in-out;
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+/*TABLET*/
+@media all and (min-width: 768px) {
+  .header__tittle {
+    margin-bottom: 20px;
+  }
+  .header__arrow {
+    margin: 30px 0 45px;
+  }
+}
+
+/*DESKTOP*/
+@media all and (min-width: 1200px) {
+  .header__tittle {
+    margin-bottom: 0px;
+  }
+  .header__arrow {
+    margin-bottom: 13px;
+  }
+}

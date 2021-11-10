@@ -1,0 +1,106 @@
+.footer {
+  box-sizing: border-box;
+  background-color: #85bfd5;
+  color: $color-white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    padding: 45px 39px;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  @media all and (min-width: 1200px) {
+    padding: 45px 340px;
+  }
+
+  &__arrow {
+    position: relative;
+    border: transparent;
+    width: 45px;
+    height: 45px;
+    background-color: $color-white;
+    text-align: center;
+    padding-top: 10.5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: translateY(-22.5px);
+
+    @media all and (min-width: 768px) {
+      position: absolute;
+      top: 0px;
+    }
+  }
+  &__arrow:hover {
+    animation-name: rotate2;
+    animation-duration: 2s;
+    animation-iteration-count: intro;
+    animation-timing-function: ease-in-out;
+    @keyframes rotate2 {
+      from {
+        top: -23px;
+        transform: rotate(0deg);
+      }
+      to {
+        top: -23px;
+        transform: rotate(360deg);
+      }
+    }
+  }
+  &__menu1,
+  &__menu2 {
+    @media all and (min-width: 768px) {
+      width: 210px;
+      text-align: left;
+      padding-left: 30px;
+    }
+
+    @media all and (min-width: 1200px) {
+      width: 159px;
+      padding: 0px;
+      margin-left: 30px;
+    }
+    &--item1,
+    &--item2 {
+      margin-bottom: 30px;
+      list-style-type: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      line-height: 1.88;
+    }
+  }
+  &__copy {
+    padding-bottom: 45px;
+    font-size: 14px;
+
+    @media all and (min-width: 768px) {
+      width: 210px;
+      text-align: left;
+      padding-left: 30px;
+      order: 0;
+    }
+    @media all and (min-width: 1200px) {
+      width: 159px;
+      padding: 0px;
+      line-height: 2.14;
+    }
+
+    .heart {
+      color: $color-orange;
+      line-height: 2.14;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    .order1 {
+      order: 1;
+    }
+    .order2 {
+      order: 2;
+    }
+  }
+}
